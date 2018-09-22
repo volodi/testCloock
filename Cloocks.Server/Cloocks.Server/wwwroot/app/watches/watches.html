@@ -1,0 +1,153 @@
+﻿
+<div class="row" >
+    <div class="justify-content-between col-3" ng-repeat="cloock in $ctrl.cloocks track by $index" ng-click="$ctrl.modal(cloock)">
+        <div class="card bg-light m-3">
+            <div class="card-img">
+                {{cloock.url}} <br />
+            </div>
+            <hr />
+            <div class="card-text">
+                {{cloock.name}} <br />
+                {{cloock.date | date:'dd-MM'}}<br/>
+                {{cloock.price}}<br />
+                {{cloock.data}}<br />
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+
+
+
+<dialog id="cloockDialog"></dialog>
+
+<button class="align-content-center" ng-click="$ctrl.get()">Виведення наступних</button>
+
+
+<!--<div class="container">
+    <h1>Bootstrap modal dialogs with angular</h1>
+    <p>Click the edit button to edit the person's name in a modal dialog.</p>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        <tr ng-repeat="person in persons">
+            <td>{={person.name}}</td>
+            <td><button type="button" class="btn btn-xs" ng-click="editDialog.open(person)">Edit...</button></td>
+        </tr>
+    </table>
+
+    <button type="button" ng-click="add()" class="btn">Add new person</button>
+
+    <div model="editDialog"><div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">Edit Person</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input ng-model="model.person.name" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div></div>
+</div>
+
+
+
+<script>
+            var app1 = angular.module('test', []);
+
+            // this represents the state of the dialog: a visible flag and the person being edited
+            var EditPersonDialogModel = function () {
+                this.visible = false;
+            };
+            EditPersonDialogModel.prototype.open = function (person) {
+                this.person = person;
+                this.visible = true;
+            };
+            EditPersonDialogModel.prototype.close = function () {
+                this.visible = false;
+            };
+
+            app1.controller('ctrl', ['$scope', function ($scope) {
+                $scope.editDialog = new EditPersonDialogModel();
+
+                $scope.persons = [{ name: 'John' }, { name: 'Barbara' }];
+
+                $scope.add = function () {
+                    $scope.persons.push({ name: 'New Person' });
+                };
+            }]);
+
+            app1.directive('editPersonDialog', [function () {
+                return {
+                    restrict: 'E',
+                    scope: {
+                        model: '=',
+                    },
+                    link: function (scope, element, attributes) {
+                        scope.$watch('model.visible', function (newValue) {
+                            var modalElement = element.find('.modal');
+                            modalElement.modal(newValue ? 'show' : 'hide');
+                        });
+
+                        element.on('shown.bs.modal', function () {
+                            scope.$apply(function () {
+                                scope.model.visible = true;
+                            });
+                        });
+
+                        element.on('hidden.bs.modal', function () {
+                            scope.$apply(function () {
+                                scope.model.visible = false;
+                            });
+                        });
+
+                    },
+                    templateUrl: 'edit-person-dialog.html',
+                };
+            }]);
+</script>-->
+
+<!--<div><a href="#myModal" data-toggle="modal" id="1" data-target="#edit-modal">Edit 1</a></div>
+<div><a href="#myModal" data-toggle="modal" id="2" data-target="#edit-modal">Edit 2</a></div>
+<div><a href="#myModal" data-toggle="modal" id="3" data-target="#edit-modal">Edit 3</a></div>
+
+<div id="edit-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body edit-content">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+   ctrl.s = $('#edit-modal').on('show.bs.modal', function (e) {
+        console.log(e);
+            var $modal = $(this),
+                esseyId = e.relatedTarget.id;
+                    $modal.find('.edit-content').html(esseyId);
+        })
+</script>-->

@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container">
+        <div class="row">
+            @foreach (var items in ViewBag.Clock)
+            {
+                <div class="col-md-3 card2">
+                    <div  style="height:320px">
+                        @items.Name<b>_</b>@items.Price<b>_</b>@items.Data<b>_</b>@items.Date
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+<style type="text/css">
+
+</style> 
+
+

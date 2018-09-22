@@ -1,0 +1,9 @@
+B:\C#\Web\Cloocks.Server\Cloocks.Server\bin\Debug\netcoreapp1.1\Cloocks.Server.deps.json
+B:\C#\Web\Cloocks.Server\Cloocks.Server\bin\Debug\netcoreapp1.1\Cloocks.Server.runtimeconfig.json
+B:\C#\Web\Cloocks.Server\Cloocks.Server\bin\Debug\netcoreapp1.1\Cloocks.Server.runtimeconfig.dev.json
+B:\C#\Web\Cloocks.Server\Cloocks.Server\bin\Debug\netcoreapp1.1\Cloocks.Server.dll
+B:\C#\Web\Cloocks.Server\Cloocks.Server\obj\Debug\netcoreapp1.1\Cloocks.Server.csprojResolveAssemblyReference.cache
+B:\C#\Web\Cloocks.Server\Cloocks.Server\obj\Debug\netcoreapp1.1\Cloocks.Server.AssemblyInfo.cs
+B:\C#\Web\Cloocks.Server\Cloocks.Server\bin\Debug\netcoreapp1.1\Cloocks.Server.pdb
+B:\C#\Web\Cloocks.Server\Cloocks.Server\obj\Debug\netcoreapp1.1\Cloocks.Server.dll
+B:\C#\Web\Cloocks.Server\Cloocks.Server\obj\Debug\netcoreapp1.1\Cloocks.Server.pdb
